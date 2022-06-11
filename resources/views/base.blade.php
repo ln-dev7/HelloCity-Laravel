@@ -8,7 +8,8 @@
     <title>@yield('title', env('APP_NAME'))</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -25,12 +26,12 @@
             text-align: center;
         }
 
-        a{
+        a {
             text-decoration: none;
             color: #f9322c;
         }
 
-        b{
+        b {
             font-weight: 400;
             color: #f9322c;
         }
@@ -39,15 +40,26 @@
         body {
             height: 100%;
         }
+
         body {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             background: #171923;
+            overflow: hidden;
         }
 
-        .header{
+        .circle {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: transparent;
+            border: 1px solid #f9322c;
+            border-radius: 50%;
+        }
+
+        .header {
             position: absolute;
             top: 0;
             width: 100%;
@@ -57,20 +69,20 @@
             padding: 10px;
         }
 
-        .header a{
+        .header a {
             text-decoration: underline;
             font-size: 18px;
             padding: 10px;
         }
 
-        .main{
+        .main {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
 
-        .main h1{
+        .main h1 {
             margin-bottom: 10px;
             font-weight: 600;
         }
@@ -79,7 +91,7 @@
             color: #d7d7dc;
         }
 
-        .footer{
+        .footer {
             position: absolute;
             bottom: 0;
             width: 100%;
@@ -94,14 +106,14 @@
 
 <body>
     <header class="header">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
+        <a href="{{ route('home') }}">Home</a>
+        <a href="{{ route('about') }}">About</a>
     </header>
 
     @yield('content')
 
     <footer class="footer">
-        <p>&copy; Copyright {{date('Y')}}</p>
+        <p>&copy; Copyright {{ date('Y') }}</p>
     </footer>
 </body>
 
