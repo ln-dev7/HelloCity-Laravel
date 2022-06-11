@@ -75,7 +75,7 @@
         <h1>By <a href="https://lndev.me">LN Dev</a></h1>
     </main>
     <footer class="footer">
-        <p>&copy; Copyright 2022 - <a href="/"> Home</a></p>
+        <p>&copy; Copyright {{date('Y')}} - <a href="/"> Home</a></p>
     </footer>
 </body>
 

@@ -30,6 +30,10 @@
             color: #f9322c;
         }
 
+        b{
+            font-weight: 400;
+        }
+
         html,
         body {
             height: 100%;
@@ -73,10 +77,10 @@
 <body>
     <main class="main">
         <h1>Hello from Camerun</h1>
-        <h3>It's currently 08:00 AM.</h3>
+        <h3>It's currently <b>{{ date('h:i A') }}</b>.</h3>
     </main>
     <footer class="footer">
-        <p>&copy; Copyright 2022 - <a href="/about"> About us</a></p>
+        <p>&copy; Copyright {{date('Y')}} - <a href="/about"> About us</a></p>
     </footer>
 </body>
 
