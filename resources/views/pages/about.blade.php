@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hello City</title>
+    <title>About | Hello City</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -32,6 +32,7 @@
 
         b{
             font-weight: 400;
+            color: #f9322c;
         }
 
         html,
@@ -46,16 +47,27 @@
             background: #171923;
         }
 
+        .header{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header a{
+            text-decoration: underline;
+            font-size: 18px;
+            padding: 10px;
+        }
+
         .main{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-
-        .main h1{
-            margin-bottom: 10px;
-            font-weight: 600;
         }
 
         .main h3 {
@@ -70,17 +82,21 @@
             justify-content: center;
             align-items: center;
             padding: 10px;
+            border-top: 1px solid #D7D7DC43;
         }
     </style>
 </head>
 
 <body>
+    <header class="header">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </header>
     <main class="main">
-        <h1>Hello from Camerun</h1>
-        <h3>It's currently <b>{{ date('h:i A') }}</b>.</h3>
+        <h2>Coded by <a href="https://lndev.me">LN Dev</a></h2>
     </main>
     <footer class="footer">
-        <p>&copy; Copyright {{date('Y')}} - <a href="/about"> About us</a></p>
+        <p>&copy; Copyright {{date('Y')}}</p>
     </footer>
 </body>
 
