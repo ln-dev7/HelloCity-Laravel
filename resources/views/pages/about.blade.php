@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', 'About | ' . env('APP_NAME'))
+@section('title', 'About | ' . config('app.name'))
 
 @section('content')
     <main class="main">
