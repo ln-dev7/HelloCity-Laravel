@@ -113,7 +113,12 @@
     @yield('content')
 
     <footer class="footer">
-        <p>&copy; Copyright {{ date('Y') }}</p>
+        <p>
+            @if (Route::is('home'))
+            LN -
+            @endif
+            &copy; Copyright {{ date('Y') }}
+        </p>
     </footer>
 </body>
 
