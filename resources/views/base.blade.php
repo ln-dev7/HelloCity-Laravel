@@ -60,6 +60,30 @@
             border-radius: 50%;
         }
 
+        .button{
+            display: inline;
+            position: absolute;
+            border: none;
+            background: transparent;
+            background: #fff;
+            left: 20px;
+            bottom: 60px;
+        }
+
+        .button span{
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 500;
+            padding: 14px;
+            background: #f9322c;
+            transition: .3s ease;
+        }
+
+        .button span:hover{
+            transform: translate(8px, -8px)
+        }
+
         .header {
             position: absolute;
             top: 0;
@@ -129,6 +153,7 @@
     </header>
 
     <div class="circle"></div>
+    <a href="https://github.com/ln-dev7/HelloCity-Laravel" class="button"><span>Laravel Application</span></a>
 
     @yield('content')
 
