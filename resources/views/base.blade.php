@@ -52,10 +52,11 @@
 
         .circle {
             position: absolute;
+            top: -60%;
             width: 500px;
             height: 500px;
-            background: transparent;
-            border: 1px solid #f9322c;
+            background: #1A1723;
+            border: 2px solid #f9322c;
             border-radius: 50%;
         }
 
@@ -67,6 +68,7 @@
             justify-content: center;
             align-items: center;
             padding: 10px;
+            z-index: 2;
         }
 
         .header a {
@@ -96,7 +98,7 @@
             height: 100px;
             object-fit: cover;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .img-orange{
@@ -125,6 +127,8 @@
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('about') }}">About</a>
     </header>
+
+    <div class="circle"></div>
 
     @yield('content')
 
