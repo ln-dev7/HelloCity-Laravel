@@ -91,6 +91,22 @@
             color: #d7d7dc;
         }
 
+        .main img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .img-orange{
+            border: 2px solid #f9322c;
+        }
+
+        .img-white{
+            border: 2px solid #d7d7dc;
+        }
+
         .footer {
             position: absolute;
             bottom: 0;
@@ -115,7 +131,7 @@
     <footer class="footer">
         <p>
             @if (Route::is('home'))
-            LN -
+                LN -
             @endif
             &copy; Copyright {{ date('Y') }}
         </p>
